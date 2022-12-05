@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="277.582">
+<testcase classname="user could register with a new account" name="User register by entering valid data" time="13.383">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select Gender.....................................................passed
+And user enter First Name "Ahmed"...........................................passed
+And user Enter Last Name  "Awny"............................................passed
+And user Enter Date of birth................................................passed
+And user enter valid email..................................................passed
+And user enter matched password and confirmed password "Ahmed_1234".........passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login to the web application" name="user login with valid email and password" time="11.093">
+<system-out><![CDATA[Given user should navigate to login page....................................passed
+When user enter email "ahmedeldaly685@gmail.com" and password "Ahmed_1234"..passed
+And user click on login button..............................................passed
+Then user login to the web application successfully.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login to the web application" name="user login with invalid email and password" time="10.572">
+<system-out><![CDATA[Given user should navigate to login page....................................passed
+When user enter email "ahmed123@gmail.com" and password "Ahmed1234".........passed
+And user click on login button..............................................passed
+Then user could not login to the web application............................passed
+]]></system-out>
+</testcase>
+<testcase classname="validate currency function" name="user select euro from currency" time="10.154">
+<system-out><![CDATA[When user select euro option................................................passed
+Then the price of products will be with euro................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with product name" time="11.111">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "book".................................................passed
+Then user should find "book" in search result...............................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with product name 2" time="9.791">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "laptop"...............................................passed
+Then user should find "laptop" in search result.............................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with product name 3" time="10.587">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "nike".................................................passed
+Then user should find "nike" in search result...............................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with sku" time="13.155">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "SCI_FAITH"............................................passed
+Then user should find "SCI_FAITH" in Product result Details.................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with sku 2" time="13.634">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "APPLE_CAM"............................................passed
+Then user should find "APPLE_CAM" in Product result Details.................passed
+]]></system-out>
+</testcase>
+<testcase classname=": user should be able to search for products" name="user should be able to search with sku 3" time="12.846">
+<system-out><![CDATA[When user go to search field................................................passed
+And user search with "SF_PRO_11"............................................passed
+Then user should find "SF_PRO_11" in Product result Details.................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should select a subcategory from a main category" name="user use hover to select a category and click on a cub category" time="10.378">
+<system-out><![CDATA[When user hover a category and select sub category..........................passed
+Then user should find the sub category name in page title...................passed
+]]></system-out>
+</testcase>
+<testcase classname="validating homeSlider feature" name="user should be able to click on first slider" time="18.774">
+<failure message="Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59343}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59343/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 27cccff43b115a377678518c950bfd09" type="org.openqa.selenium.TimeoutException"><![CDATA[When user click on first slider.............................................passed
+Then user navigates first slider product page...............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be "https://demo.nopcommerce.com/nokia-lumia-1020". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59343}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59343/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27cccff43b115a377678518c950bfd09
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesFirstSliderProductPage(HomeSliderStepDefinition.java:26)
+	at ✽.user navigates first slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="validating homeSlider feature" name="user should be able to click on second slider" time="21.815">
+<failure message="Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59371}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59371/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 553e81077ad5f9d240d67741de0d4770" type="org.openqa.selenium.TimeoutException"><![CDATA[When user click on second slider............................................passed
+Then user navigates second slider product page..............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be "https://demo.nopcommerce.com/iphone-6". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59371}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59371/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 553e81077ad5f9d240d67741de0d4770
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesSecondSliderProductPage(HomeSliderStepDefinition.java:49)
+	at ✽.user navigates second slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="Validating follow us feature" name="user should be able to click on facebook link" time="27.49">
+<system-out><![CDATA[When user click on facebook link............................................passed
+Then user should navigate to facebook website...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating follow us feature" name="user should be able to click on twitter link" time="12.838">
+<system-out><![CDATA[When user click on twitter link.............................................passed
+Then user should navigate to twitter website................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating follow us feature" name="user should be able to click on rrs link" time="8.707">
+<failure message="" type="java.util.NoSuchElementException"><![CDATA[When user click on rrs link.................................................passed
+Then user should navigate to rrs website....................................failed
+
+StackTrace:
+java.util.NoSuchElementException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:721)
+	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:742)
+	at org.example.stepDefinitions.followUsStepDefinition.userShouldNavigateToRrsWebsite(followUsStepDefinition.java:64)
+	at ✽.user should navigate to rrs website(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F07_followUs.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="Validating follow us feature" name="user should be able to click on youtube link" time="25.82">
+<system-out><![CDATA[When user click on youtube link.............................................passed
+Then user should navigate to youtube website................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating wishlist feature" name="user should be able to add  products to wishlist" time="10.028">
+<system-out><![CDATA[When user click on wishlist button of product...............................passed
+Then success message should be displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating wishlist feature" name="product should be displayed in wishlist page" time="24.904">
+<system-out><![CDATA[When user click on wishlist button of product...............................passed
+And user click on wishlist link.............................................passed
+Then user will find the quantity of products not equal zero.................passed
+]]></system-out>
+</testcase>
+</testsuite>

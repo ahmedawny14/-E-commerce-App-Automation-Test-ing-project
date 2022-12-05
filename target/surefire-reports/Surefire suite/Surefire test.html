@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Dec 05 23:09:11 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>278 seconds (278438 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on first slider", "validating homeSlider feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59343}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59343/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27cccff43b115a377678518c950bfd09
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesFirstSliderProductPage(HomeSliderStepDefinition.java:26)
+	at ?.user navigates first slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace242951774", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace242951774'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59343}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59343/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27cccff43b115a377678518c950bfd09
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesFirstSliderProductPage(HomeSliderStepDefinition.java:26)
+	at ?.user navigates first slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:7)
+</pre></div></td>
+<td>18</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on second slider", "validating homeSlider feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59371}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59371/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 553e81077ad5f9d240d67741de0d4770
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesSecondSliderProductPage(HomeSliderStepDefinition.java:49)
+	at ?.user navigates second slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1200812313", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1200812313'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.73, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BMT\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59371}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59371/devtoo..., se:cdpVersion: 108.0.5359.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 553e81077ad5f9d240d67741de0d4770
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.HomeSliderStepDefinition.userNavigatesSecondSliderProductPage(HomeSliderStepDefinition.java:49)
+	at ?.user navigates second slider product page(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F06_HomeSliders.feature:13)
+</pre></div></td>
+<td>21</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on rrs link", "Validating follow us feature"</td>
+<td><div><pre>java.util.NoSuchElementException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:721)
+	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:742)
+	at org.example.stepDefinitions.followUsStepDefinition.userShouldNavigateToRrsWebsite(followUsStepDefinition.java:64)
+	at ?.user should navigate to rrs website(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F07_followUs.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace95545487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95545487'><pre>java.util.NoSuchElementException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:721)
+	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:742)
+	at org.example.stepDefinitions.followUsStepDefinition.userShouldNavigateToRrsWebsite(followUsStepDefinition.java:64)
+	at ?.user should navigate to rrs website(file:///C:/Users/BMT/IdeaProjects/nopcommerceProject/src/main/resources/features/F07_followUs.feature:16)
+</pre></div></td>
+<td>8</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with product name", ": user should be able to search for products"</td>
+<td></td>
+<td>9</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User register by entering valid data", "user could register with a new account"</td>
+<td></td>
+<td>13</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with product name", ": user should be able to search for products"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on youtube link", "Validating follow us feature"</td>
+<td></td>
+<td>25</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with sku", ": user should be able to search for products"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with sku", ": user should be able to search for products"</td>
+<td></td>
+<td>13</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user login with valid email and password", "user login to the web application"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user select euro from currency", "validate currency function"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on twitter link", "Validating follow us feature"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with product name", ": user should be able to search for products"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to click on facebook link", "Validating follow us feature"</td>
+<td></td>
+<td>27</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user use hover to select a category and click on a cub category", "user should select a subcategory from a main category"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "product should be displayed in wishlist page", "Validating wishlist feature"</td>
+<td></td>
+<td>24</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to search with sku", ": user should be able to search for products"</td>
+<td></td>
+<td>13</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user should be able to add  products to wishlist", "Validating wishlist feature"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+<tr>
+<td title='org.example.testRunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user login with invalid email and password", "user login to the web application"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunners.TestRunner@36b4cef0</td></tr>
+</table><p>
+</body>
+</html>
